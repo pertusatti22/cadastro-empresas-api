@@ -10,7 +10,8 @@ import javax.persistence.*;
 @DiscriminatorColumn(name="TYPE")
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public abstract class Pessoa {
+public class Pessoa {
+
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)

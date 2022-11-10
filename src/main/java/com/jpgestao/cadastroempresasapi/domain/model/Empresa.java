@@ -15,13 +15,13 @@ public class Empresa{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn
-    private Pessoa socio;
+    @OneToOne
+    @JoinColumn(name = "pessoa_id", nullable = false)
+    private Pessoa pessoa;
 
     @OneToOne
     @JoinColumn
-    private PessoaJuridica empresa;
+    private PessoaJuridica pessoaJuridica;
 
     @Column
     private String telefone;
